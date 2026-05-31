@@ -7,8 +7,13 @@ import time
 
 TOKEN_FILE = "tokens.json"
 
+# --- SAFETY SETTING ---
+# The script will force a refresh this many days before the token actually expires.
+SAFE_BUFFER_DAYS = 2
+SAFE_BUFFER_SECONDS = SAFE_BUFFER_DAYS * 86400
+
 def get_jwt_exp(token):
-    """Decodes a JWT string to find its exact expiration timestamp without needing an external library."""
+    """Decodes a JWT string to find its exact expiration timestamp."""
     try:
         # JWTs are split into Header.Payload.Signature
         payload_b64 = token.split('.')[1]
@@ -44,7 +49,7 @@ def save_tokens(access_token, refresh_token):
 
 def refresh_api_tokens(current_refresh_token):
     """Hits the Auth API to generate a new Access/Refresh token pair."""
-    print("[*] Access token is dead or missing. Hitting Refresh API...")
+    print("[*] Hitting Auth API for a fresh token pair...")
     url = "https://prod-services.toffeelive.com/auth/v1/token/refresh"
     
     headers = {
@@ -108,30 +113,31 @@ def update_m3u_file(new_cookie):
 
 if __name__ == "__main__":
     try:
-        # 1. Load our tokens from disk (or GitHub secret if it's the first run)
+        # 1. Load our tokens
         tokens = load_or_seed_tokens()
         access_token = tokens.get("access_token", "")
         refresh_token = tokens.get("refresh_token", "")
         
-        # 2. Check if the access token is dead or dying (less than 24 hours remaining)
+        # 2. Check the expiration math with our safety buffer
         current_time = int(time.time())
         access_exp = get_jwt_exp(access_token)
+        time_remaining = access_exp - current_time
         
-        buffer_time = 86400  # 24 hours in seconds
-        
-        if not access_token or (access_exp - current_time) < buffer_time:
-            print("[*] Access token requires refreshing...")
+        if not access_token or time_remaining < SAFE_BUFFER_SECONDS:
+            if access_token:
+                print(f"[*] Access token expires in less than {SAFE_BUFFER_DAYS} days. Refreshing now for safety...")
+            else:
+                print("[*] No access token found. Fetching initial tokens...")
+                
             access_token, refresh_token = refresh_api_tokens(refresh_token)
-            # Save them immediately so they get committed
+            # Save the new pair so Git commits them
             save_tokens(access_token, refresh_token)
         else:
-            days_left = (access_exp - current_time) / 86400
-            print(f"[*] Access token is still valid for {days_left:.1f} days. Skipping refresh API.")
+            days_left = time_remaining / 86400
+            print(f"[*] Access token is safely valid for another {days_left:.1f} days. Skipping Auth API.")
             
-        # 3. Use the valid access token to get the video cookie
+        # 3. Fetch the CDN cookie and inject it
         cdn_cookie = get_fresh_cdn_cookie(access_token)
-        
-        # 4. Inject it into the playlist
         update_m3u_file(cdn_cookie)
         
     except Exception as e:
