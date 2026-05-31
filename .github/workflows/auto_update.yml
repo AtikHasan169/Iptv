@@ -2,11 +2,20 @@ name: Master IPTV & Toffee Updater
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Runs automatically every 6 hours
-  workflow_dispatch:      # Allows manual triggers via the GitHub UI
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      ghp_token:
+        description: 'ONE-TIME SETUP: Paste your GitHub PAT (ghp_...)'
+        required: false
+        type: string
+      refresh_token:
+        description: 'ONE-TIME SETUP: Paste your Toffee Refresh Token (eyJ...)'
+        required: false
+        type: string
 
 permissions:
-  contents: write         # Required for the bot to push commits to the repo
+  contents: write
 
 jobs:
   refresh-playlists:
@@ -26,11 +35,35 @@ jobs:
         python -m pip install --upgrade pip
         pip install aiohttp requests
 
+    - name: Bootstrap Secret Vaults (First Run Only)
+      if: ${{ github.event.inputs.ghp_token != '' && github.event.inputs.refresh_token != '' }}
+      env:
+        GH_TOKEN: ${{ github.event.inputs.ghp_token }}
+      run: |
+        # This step uses your manual inputs to permanently create the repository secrets
+        gh secret set MY_GH_PAT --body "${{ github.event.inputs.ghp_token }}"
+        JSON_VAULT="{\"access_token\": \"\", \"refresh_token\": \"${{ github.event.inputs.refresh_token }}\"}"
+        gh secret set TOFFEE_TOKENS --body "$JSON_VAULT"
+        echo "Secrets successfully built and saved to the repository vault!"
+
     - name: Run Toffee Cookie Update script
       env:
-        # Passes the initial secret for the very first run (or if tokens.json is deleted)
-        DEVICE_TOKEN: ${{ secrets.TOFFEE_DEVICE_TOKEN }}
+        # Takes the manual input on the first run, or falls back to the vault on future runs
+        MANUAL_REFRESH: ${{ github.event.inputs.refresh_token }}
+        TOFFEE_TOKENS: ${{ secrets.TOFFEE_TOKENS }}
       run: python update_toffee.py
+
+    - name: Securely Overwrite GitHub Secret Vault
+      env:
+        # Uses the manually inputted GHP on the first run, or the saved one on future runs
+        GH_TOKEN: ${{ github.event.inputs.ghp_token || secrets.MY_GH_PAT }}
+      run: |
+        if [ -n "${{ env.NEW_VAULT_DATA }}" ]; then
+          gh secret set TOFFEE_TOKENS --body "${{ env.NEW_VAULT_DATA }}"
+          echo "Secret Vault successfully rotated and locked!"
+        else
+          echo "No refresh needed, Secret Vault remains untouched."
+        fi
 
     - name: Run IPTV verification script
       run: python update_playlist.py
@@ -40,9 +73,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # Stage the playlists AND the new tokens.json file
-        git add tv.m3u working_channels.m3u tokens.json
-        
-        # Commit if changes exist, otherwise exit cleanly without failing
-        git commit -m "Automated Playlist Update: Refreshed Toffee CDN cookies, updated tokens & verified streams" || exit 0
+        git add tv.m3u working_channels.m3u
+        git commit -m "Automated Playlist Update: Refreshed Toffee CDN cookies & verified streams" || exit 0
         git push
