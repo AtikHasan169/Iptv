@@ -3,7 +3,13 @@ name: Master IPTV & Toffee Updater
 on:
   schedule:
     - cron: '0 */6 * * *'  # Runs automatically every 6 hours
-  workflow_dispatch:      # Allows you to trigger it manually via the GitHub UI
+  workflow_dispatch:      
+    # THIS CREATES THE TEXT BOX WHEN YOU RUN IT MANUALLY
+    inputs:
+      manual_token:
+        description: 'Optional: Paste a fresh Golden Token here (Leave blank to use your saved Secret)'
+        required: false
+        type: string
 
 permissions:
   contents: write         # Required so the bot can push updates to the repo
@@ -28,8 +34,8 @@ jobs:
 
     - name: Run Toffee Cookie Update script
       env:
-        # Injects the secret safely without exposing it in the logs
-        DEVICE_TOKEN: ${{ secrets.TOFFEE_DEVICE_TOKEN }}
+        # Tries to use the text box first. If empty, uses the saved background secret.
+        DEVICE_TOKEN: ${{ inputs.manual_token || secrets.TOFFEE_DEVICE_TOKEN }}
       run: python update_toffee.py
 
     - name: Run IPTV verification script
