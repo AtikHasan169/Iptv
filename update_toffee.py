@@ -5,53 +5,21 @@ import json
 import base64
 import time
 
-TOKEN_FILE = "tokens.json"
-
-# --- SAFETY SETTING ---
-# The script will force a refresh this many days before the token actually expires.
 SAFE_BUFFER_DAYS = 2
 SAFE_BUFFER_SECONDS = SAFE_BUFFER_DAYS * 86400
 
 def get_jwt_exp(token):
-    """Decodes a JWT string to find its exact expiration timestamp."""
     try:
-        # JWTs are split into Header.Payload.Signature
         payload_b64 = token.split('.')[1]
-        # Add necessary Base64 padding
         payload_b64 += '=' * (-len(payload_b64) % 4)
         payload_json = base64.urlsafe_b64decode(payload_b64).decode('utf-8')
-        payload = json.loads(payload_json)
-        return payload.get('exp', 0)
+        return json.loads(payload_json).get('exp', 0)
     except Exception:
         return 0
 
-def load_or_seed_tokens():
-    """Loads tokens from the file, or uses the GitHub secret if it's the very first run."""
-    if os.path.exists(TOKEN_FILE):
-        with open(TOKEN_FILE, "r") as f:
-            return json.load(f)
-    
-    print("[*] No tokens.json found. Seeding from GitHub Secret...")
-    initial_refresh = os.environ.get("DEVICE_TOKEN")
-    if not initial_refresh:
-        raise ValueError("[-] DEVICE_TOKEN secret is missing and tokens.json does not exist!")
-    
-    return {"access_token": "", "refresh_token": initial_refresh}
-
-def save_tokens(access_token, refresh_token):
-    """Saves the tokens to a file so the GitHub Action can commit them for the next run."""
-    with open(TOKEN_FILE, "w") as f:
-        json.dump({
-            "access_token": access_token, 
-            "refresh_token": refresh_token
-        }, f, indent=4)
-    print(f"[+] Saved updated tokens to {TOKEN_FILE}")
-
 def refresh_api_tokens(current_refresh_token):
-    """Hits the Auth API to generate a new Access/Refresh token pair."""
     print("[*] Hitting Auth API for a fresh token pair...")
     url = "https://prod-services.toffeelive.com/auth/v1/token/refresh"
-    
     headers = {
         "Authorization": f"Bearer {current_refresh_token}",
         "Content-Length": "0",
@@ -62,20 +30,15 @@ def refresh_api_tokens(current_refresh_token):
     res = requests.post(url, headers=headers)
     if res.status_code == 200:
         data = res.json().get("data", {})
-        new_access = data.get("access_token")
-        new_refresh = data.get("refresh_token")
-        
-        if new_access and new_refresh:
+        if data.get("access_token") and data.get("refresh_token"):
             print("[+] Successfully generated a brand new token pair!")
-            return new_access, new_refresh
+            return data["access_token"], data["refresh_token"]
             
     raise Exception(f"[-] Token refresh failed. HTTP {res.status_code}\n{res.text}")
 
 def get_fresh_cdn_cookie(access_token):
-    """Trades the Access Token for a fresh 3-day CDN cookie."""
-    print("[*] Requesting fresh CDN Edge-Cache-Cookie from Entitlement API...")
+    print("[*] Requesting fresh CDN Edge-Cache-Cookie...")
     url = "https://entitlement-prod.services.toffeelive.com/toffee/BD/DK/android-mobile/playback/Xi_Ga5oBNnOkwJLWkhKP"
-    
     headers = {
         "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json; charset=utf-8",
@@ -84,16 +47,13 @@ def get_fresh_cdn_cookie(access_token):
     }
     
     res = requests.post(url, headers=headers, json={})
-    if res.status_code == 200:
-        cookie = res.cookies.get("Edge-Cache-Cookie")
-        if cookie:
-            print(f"[+] Successfully fetched fresh Edge-Cache-Cookie: {cookie[:30]}...")
-            return cookie
+    if res.status_code == 200 and res.cookies.get("Edge-Cache-Cookie"):
+        print("[+] Successfully fetched fresh Edge-Cache-Cookie!")
+        return res.cookies.get("Edge-Cache-Cookie")
             
     raise Exception(f"[-] Failed to fetch CDN cookie. HTTP {res.status_code}\n{res.text}")
 
 def update_m3u_file(new_cookie):
-    """Injects the new cookie into the tv.m3u file."""
     file_path = "tv.m3u"
     try:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -104,39 +64,49 @@ def update_m3u_file(new_cookie):
             f'\\g<1>{new_cookie}',
             content
         )
-
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(updated_content)
-        print(f"[+] SUCCESS! Replaced {count} channel links in {file_path}.")
+        print(f"[+] SUCCESS! Replaced {count} channel links.")
     except FileNotFoundError:
-        print(f"[-] ERROR: {file_path} file not found!")
+        print("[-] ERROR: tv.m3u file not found!")
 
 if __name__ == "__main__":
     try:
-        # 1. Load our tokens
-        tokens = load_or_seed_tokens()
-        access_token = tokens.get("access_token", "")
-        refresh_token = tokens.get("refresh_token", "")
+        # 1. Check for manual input first, otherwise load from the secret vault
+        manual_refresh = os.environ.get("MANUAL_REFRESH")
+        tokens_env = os.environ.get("TOFFEE_TOKENS")
         
-        # 2. Check the expiration math with our safety buffer
+        if manual_refresh:
+            print("[*] Manual input detected! Bootstrapping initial setup...")
+            access_token = ""
+            refresh_token = manual_refresh
+        elif tokens_env:
+            tokens = json.loads(tokens_env)
+            access_token = tokens.get("access_token", "")
+            refresh_token = tokens.get("refresh_token", "")
+        else:
+            raise ValueError("[-] No tokens found in Secrets or manual input!")
+        
+        # 2. Check Expiration
         current_time = int(time.time())
         access_exp = get_jwt_exp(access_token)
         time_remaining = access_exp - current_time
         
+        # 3. Refresh if needed
         if not access_token or time_remaining < SAFE_BUFFER_SECONDS:
-            if access_token:
-                print(f"[*] Access token expires in less than {SAFE_BUFFER_DAYS} days. Refreshing now for safety...")
-            else:
-                print("[*] No access token found. Fetching initial tokens...")
-                
+            print("[*] Token requires refreshing for safety...")
             access_token, refresh_token = refresh_api_tokens(refresh_token)
-            # Save the new pair so Git commits them
-            save_tokens(access_token, refresh_token)
-        else:
-            days_left = time_remaining / 86400
-            print(f"[*] Access token is safely valid for another {days_left:.1f} days. Skipping Auth API.")
             
-        # 3. Fetch the CDN cookie and inject it
+            # Pack the new tokens back into a compact JSON string
+            new_vault_data = json.dumps({"access_token": access_token, "refresh_token": refresh_token})
+            
+            # Send the new JSON string to the GitHub Action runner to update the vault
+            with open(os.environ['GITHUB_ENV'], 'a') as f:
+                f.write(f"NEW_VAULT_DATA={new_vault_data}\n")
+        else:
+            print(f"[*] Access token is safely valid for {time_remaining / 86400:.1f} days.")
+            
+        # 4. Fetch Cookie & Update File
         cdn_cookie = get_fresh_cdn_cookie(access_token)
         update_m3u_file(cdn_cookie)
         
