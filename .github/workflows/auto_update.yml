@@ -3,16 +3,10 @@ name: Master IPTV & Toffee Updater
 on:
   schedule:
     - cron: '0 */6 * * *'  # Runs automatically every 6 hours
-  workflow_dispatch:      
-    # THIS CREATES THE TEXT BOX WHEN YOU RUN IT MANUALLY
-    inputs:
-      manual_token:
-        description: 'Optional: Paste a fresh Golden Token here (Leave blank to use your saved Secret)'
-        required: false
-        type: string
+  workflow_dispatch:      # Allows manual triggers via the GitHub UI
 
 permissions:
-  contents: write         # Required so the bot can push updates to the repo
+  contents: write         # Required for the bot to push commits to the repo
 
 jobs:
   refresh-playlists:
@@ -34,8 +28,8 @@ jobs:
 
     - name: Run Toffee Cookie Update script
       env:
-        # Tries to use the text box first. If empty, uses the saved background secret.
-        DEVICE_TOKEN: ${{ inputs.manual_token || secrets.TOFFEE_DEVICE_TOKEN }}
+        # Passes the initial secret for the very first run (or if tokens.json is deleted)
+        DEVICE_TOKEN: ${{ secrets.TOFFEE_DEVICE_TOKEN }}
       run: python update_toffee.py
 
     - name: Run IPTV verification script
@@ -46,9 +40,9 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # Stage both of the playlist files
-        git add tv.m3u working_channels.m3u
+        # Stage the playlists AND the new tokens.json file
+        git add tv.m3u working_channels.m3u tokens.json
         
-        # Only commit if changes were actually made, otherwise exit cleanly
-        git commit -m "Automated Playlist Update: Refreshed Toffee CDN cookies & verified streams" || exit 0
+        # Commit if changes exist, otherwise exit cleanly without failing
+        git commit -m "Automated Playlist Update: Refreshed Toffee CDN cookies, updated tokens & verified streams" || exit 0
         git push
