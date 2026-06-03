@@ -72,7 +72,6 @@ def update_m3u_file(new_cookie):
 
 if __name__ == "__main__":
     try:
-        # 1. Check for manual input first, otherwise load from the secret vault
         manual_refresh = os.environ.get("MANUAL_REFRESH")
         tokens_env = os.environ.get("TOFFEE_TOKENS")
         
@@ -87,26 +86,23 @@ if __name__ == "__main__":
         else:
             raise ValueError("[-] No tokens found in Secrets or manual input!")
         
-        # 2. Check Expiration
         current_time = int(time.time())
         access_exp = get_jwt_exp(access_token)
         time_remaining = access_exp - current_time
         
-        # 3. Refresh if needed
         if not access_token or time_remaining < SAFE_BUFFER_SECONDS:
             print("[*] Token requires refreshing for safety...")
             access_token, refresh_token = refresh_api_tokens(refresh_token)
             
-            # Pack the new tokens back into a compact JSON string
             new_vault_data = json.dumps({"access_token": access_token, "refresh_token": refresh_token})
             
-            # Send the new JSON string to the GitHub Action runner to update the vault
+            # --- THE FIX IS HERE ---
+            # Using EOF markers forces GitHub Actions to keep the double quotes intact!
             with open(os.environ['GITHUB_ENV'], 'a') as f:
-                f.write(f"NEW_VAULT_DATA={new_vault_data}\n")
+                f.write(f"NEW_VAULT_DATA<<EOF\n{new_vault_data}\nEOF\n")
         else:
             print(f"[*] Access token is safely valid for {time_remaining / 86400:.1f} days.")
             
-        # 4. Fetch Cookie & Update File
         cdn_cookie = get_fresh_cdn_cookie(access_token)
         update_m3u_file(cdn_cookie)
         
