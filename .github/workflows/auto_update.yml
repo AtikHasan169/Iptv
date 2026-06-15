@@ -58,12 +58,13 @@ jobs:
         # Uses the manually inputted GHP on the first run, or the saved one on future runs
         GH_TOKEN: ${{ github.event.inputs.ghp_token || secrets.MY_GH_PAT }}
       run: |
-        if [ -n "${{ env.NEW_VAULT_DATA }}" ]; then
-          gh secret set TOFFEE_TOKENS --body "${{ env.NEW_VAULT_DATA }}"
+        if [ -n "$NEW_VAULT_DATA" ]; then
+          gh secret set TOFFEE_TOKENS --body "$NEW_VAULT_DATA"
           echo "Secret Vault successfully rotated and locked!"
         else
           echo "No refresh needed, Secret Vault remains untouched."
         fi
+
 
     - name: Run IPTV verification script
       run: python update_playlist.py
