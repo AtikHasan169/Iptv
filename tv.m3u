@@ -1,4 +1,248 @@
-#EXTM3U 
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://akamaividz2.zee5.com/image/upload/w_720,h_405,c_scale,f_webp,q_auto:eco/resources/0-9-zeecafehd/list/1920x1080list60cd7fc8b57c4e1baf1cd4f603413540.jpg" group-title="Tuhin TV",FIFA - UNITED8 SPORTS 1 HD
+http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="https://cdn.media.amplience.net/i/xcite/668670-01" group-title="Tuhin TV",4K FIFA - BEIN SPORTS 1
+https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://static3.go3.tv/scale/go3/webuploads/rest/upload/category/11699816/images/29083548?dsth=412&dstw=412&srcmode=3&quality=80&type=2&srcx=1&srcy=1&srcw=1%2F1&srch=1%2F1" group-title="Tuhin TV",FIFA - GO 3 Sports 3
+http://ytoxw6un.ottclub.xyz/iptv/KCUHA6DGYYVA8ZZFUPQV3KZH/6408/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ SPAIN
+https://d63fabad.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWVzX0ZJRkFQbHVzU3BhbmlzaF9ITFM/53e4b755-d6d2-4570-a428-208005ef9f06/3.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ FRANCE
+https://37b4c228.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/f2c73522-2cab-4ea6-a7ad-e7cc97b7e2f4/2.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ ARGENTINA
+https://6c849fb3.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctbXhfRklGQVBsdXNTcGFuaXNoLTFfSExT/c0e0ef46-4e31-4353-b82b-916f4cf45520/0.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+
+https://a62dad94.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/80bf1fe5-21ec-4983-9b1d-48d1a0db0cb8/2.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/brjbC4wz/Untitled-design.png" group-title="Tuhin TV",FIFA - TUHINEXT SPORTS
+https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA - DD SPORTS
+https://cdn-6.pishow.tv/live/13/13_1.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWH1mamFKiKgx7pBH-z0gpdckNUXR7DjnibkEeAOJ4Cg&s=10" group-title="Tuhin TV",FIFA - WIN SPORTS
+https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://d2u0ktu8omkpf6.cloudfront.net/acd4e897b3af3005b0aa2f835a78064eb40690dcebb9d1a7.jpg" group-title="Tuhin TV",FIFA - SOMOY TV
+https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz7rTSV-cxJfqnKNH32EtnKomEB4P9X6mRUHYq-VoBFz1ctjumb7RVRy4&s=10" group-title="Tuhin TV",FIFA - EN VIVO FHD
+https://daffodil.thelistener.pk/tele.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7e7WljUIJvc4C9TDZdac5cKT2oH2T6aXELALmADqaZQ&s=10" group-title="Tuhin TV",FIFA - D SPORTS
+http://190.117.20.37:8000/play/a08d/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://static.vecteezy.com/system/resources/previews/066/197/822/non_2x/real-madrid-cf-logo-football-club-icon-digital-download-free-vector.jpg" group-title="Tuhin TV",FIFA - REAL MADRID
+https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
+
+#EXTINF:-1 tvg-logo="https://images-cdn3.welcomesoftware.com/assets/Bein.jpg/Zz1mNmExMWMyZWVlNmExMWVmOWJhNjRhYzEwMjk2ODg1YQ==?width=800&height=448" group-title="Tuhin TV",FIFA 4K - BEIN SPORTS XTRA
+https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
+
+#EXTINF:-1 tvg-logo="https://lasociedaddelcontenido.com/wp-content/uploads/2025/07/Imagen-79.jpg" group-title="Tuhin TV",FIFA - CAZÃ‰ TV
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo9aESiGv9lWeUpU3CJyOwM6yXHJ6YS8i31RkSYhVO1Q&s=10" group-title="Tuhin TV",FIFA - T SPORTS
+http://luckonline.eu/live/y49sz6KMQs/6115263489/1142.ts
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ BRAZIL
+https://e3be9ac5.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctYnJfRklGQVBsdXNQb3J0dWd1ZXNlX0hMUw/6d81b9f4-8ac9-46eb-8936-5c8d851439bc/3.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",ESPN 2
+https://1nyaler.streamhostingcdn.top/stream/101/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ ITALY
+https://5d95f7d7.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWl0X0ZJRkFQbHVzSXRhbGlhbl9ITFM/e402b23d-4b1c-4d2e-a441-c02aee2c5946/2.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ GERMANY
+https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Ekattor TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Jamuna TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Channel 24
+https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Sangsad TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/1709-audio_113392_eng=113200-video=2202800.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",SPL Saudi Sports
+https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist_b350000_t64MjQwcA==.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA+ English (Samsung)
+https://c822c659.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1pbl9GSUZBUGx1c0VuZ2xpc2hfSExT/a4288c44-0852-418a-874a-6068c1f660a7/2.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.datocms-assets.com/187683/1765963965-210309-fgr-partner-dazn.png?auto=format" group-title="Tuhin TV",FIFA DAZN 4K
+https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FOX SPORTS 1
+https://1nyaler.streamhostingcdn.top/stream/25/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FOX SPORTS 2
+https://1nyaler.streamhostingcdn.top/stream/26/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FIFA - ESPN FHD
+https://1nyaler.streamhostingcdn.top/stream/99/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",GOAL TV
+https://streams2.sofast.tv/sofast/goaltv/goaltv_3500k.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",OMAN SPORTS
+https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",BAHRAIN SPORTS
+https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/chunklist_w747233389_b978000.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",BEIN SPORTS 3
+https://andro.226503.xyz/checklist/androstreamlivebs3.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",BEIN SPORTS 4
+https://andro.226503.xyz/checklist/androstreamlivebs4.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Somoy TV
+https://live.thebosstv.com:30443/dwlive/Somoy-TV/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",ATN News
+https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Independent TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Womens Sports Network
+https://d39accvx65hq9o.cloudfront.net/Womens_Sports_Network.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FOX SPORTS 1
+http://41.223.30.230/FOXSPORTS1/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Tennis Channel
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01444-tennischannelth-tennischnlintl-lggb/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Fubo Sports Network
+https://aegis-cloudfront-1.tubi.video/c2ac89da-5c69-439e-b85d-d87de0548b54/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FTF SPORTS
+https://1657061170.rsc.cdn77.org/HLS/FTF-LINEAR.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Fox Sports 501
+http://y3fqd48g.megatv.fun/iptv/NRLXRWSBWBPLN4/19146/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Star Sports 3
+http://103.157.248.140:8000/play/a00i/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Star Sports 1 Hindi
+http://41.205.93.154/STARSPORTS1/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",EURO SPORTS
+https://stream.ottplus.bd/live/euro_sports_hd_abr/live/euro_sports_hd/chunks.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKQcszDgXJPiYbC0F7uVvhWUeJRjJvPbeI2xXRgeYG6w&s=10" group-title="Tuhin TV",FIFA - S LIVE
+http://premiumtvs.space/live/jen12345/Jen54321/745149.ts
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8JXnBSwRJQFQzEJ494bL599xWzBf1LPbljOZ8lTvlknP5pUeeN7wPTRCp&s=10" group-title="Tuhin TV",FIFA - CHAINA
+https://pullsgp.yyzb456.top/live/stream-506605_lhd.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Star Sports 2 (Hindi)
+http://103.157.248.140:8000/play/a01m/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",ESPN 4K
+https://1nyaler.streamhostingcdn.top/stream/97/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FOX 2
+https://1nyaler.streamhostingcdn.top/stream/26/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://statics.foxsports.com/www.foxsports.com/content/uploads/2023/05/IMG_6227.png" group-title="Tuhin TV",FIFA - GO+
+https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8YlJcQHUBQ02RBcZuCpZ52XLA6NNe9Q8sRviSowgSCA&s=10" group-title="Tuhin TV",SONAR-BANGLA
+https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD-video=2137600.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",SkySports News
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/KD6YT2WWZRCKHB/9289/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",DAZN 2 4K
+http://23.237.104.106:8080/DAZN_2/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",USA BEIN
+http://23.237.104.106:8080/USA_BEIN/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",FOX DEPORTES 4K
+http://23.237.104.106:8080/USA_FOX_DEPORTES/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",RAJDHANI TV
+https://sm-monirul.top/toffee/play/rajdhani_tv.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",SUNNAH
+https://tiger-hub.vercel.app@vodzong.mjunoon.tv:8087/streamtest/SaudiSunnah-141/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Go 3 Sports 1 HD
+http://ytoxw6un.ottclub.xyz/iptv/KCUHA6DGYYVA8ZZFUPQV3KZH/18001/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjqwL9fYw0le_LQ0oMvcvuSPbA-wMsPEi07_8g72jw-8NIW7l87H7Zfo&s=10" group-title="Tuhin TV",Go 3 Sports 1 HD
+http://ytoxw6un.ottclub.xyz/iptv/KCUHA6DGYYVA8ZZFUPQV3KZH/18000/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",DEEPTO TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",CHANNEL 1NE
+https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",NTV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Channel I
+https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Maasranga Tv
+https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTN9F_-2GGQV_3JVrbanykmxUDo5iUdt8gLZU1kRRq-7_wphI7GP3LihZx&s=10" group-title="Tuhin TV",FIFA - PTV SPORTS
+http://stalker.hakunamata.workers.dev/play/1099/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",TSN 5
+http://stalker.hakunamata.workers.dev/play/262/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMX_rRty-Eut02lFPjWf7u9fkXszPgFWVYFyS9vbFtbw&s=10" group-title="Tuhin TV",TSN 3
+http://stalker.hakunamata.workers.dev/play/260/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU-hUaCC9zW2BWZVGfE8c1Q0urAHbv-Rv-jyUsdwygGA&s=10" group-title="Tuhin TV",TSN 4
+http://stalker.hakunamata.workers.dev/play/261/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfOFoAjWjZNs0aPEpEM8Pb4O7ZRUTgFJ0zae9xzYxv7Q&s=10" group-title="Tuhin TV",FIFA - Unite8 Sports 2 HD
+http://212.102.34.8:9080/AndFlixHD/video.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",DAZN 1
+http://znty.dyndns.org:5010/hls/eleven1.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Mecca Live
+https://owrcovcrpy.gpcdn.net/bpk-tv/1713/output/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",SONY SPORTS 2 HD
+http://main.epgmaker.com/live/y49sz6KMQs/6115263489/513.ts
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",SONY SPORTS 1 HD
+http://stalker.hakunamata.workers.dev/play/1101/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Sony Sports 5
+http://103.157.248.140:8000/play/a05x/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Bonolota Express - 2026
+http://103.203.93.4/Dhallywood%20(Bangladeshi)/2026/Bonolota%20Express%20(2026)/Bonolota%20Express%20(2026)%20Bengali%20Amazon%20WEB-DL%20H264%20AAC%20720p.mkv
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Rakkhosh - 2026
+http://103.203.93.4/Dhallywood%20(Bangladeshi)/2026/RAKKHOSH%20Bangla%20Movie%20SIAM/Rakkhosh%20(2026)%20Bengali%20720p%20HD-Camrip.mp4
+
+#EXTINF:-1 tvg-logo="https://assets.goplay.co/logos/default_tv.png" group-title="Tuhin TV",Star Sports Select 1 HD
+http://103.157.248.140:8000/play/a00o/index.m3u8
+ 
 
 #EXTINF:-1 tvg-logo="images/PTV.png" group-title="SPORTS",PTV
 http://10.20.30.30:8989/PTV/index.m3u8
