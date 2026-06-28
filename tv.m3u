@@ -1,4 +1,102 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2NSvkyk8Fx2UMBXFdEXS36TNepD6Uy8pMQveJnYRbDnXedcg2tttKHz3&s=10" group-title="TNT",TNT SPORTS HD
+https://xstm.250909.cc/live/SPORTSFLUX-PRD-76753-1/4a7a4af09781/1033.m3u8
+#EXTINF:-1 tvg-logo="https://s21.q4cdn.com/819998841/files/doc_news/2024/May/Willow-logo-transparent-cb.png" group-title="WILLOW",WILLOW HD
+https://tmaxapp.site/willoweng.m3u8
+#EXTINF:-1 group-title="SonyLiv",SonyLiv - ENG
+#EXTVLCOPT:http-referrer=https://www.sonyliv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://sonymtmnew-akamaized.pages.dev/hls/live/2105080/cricodi2606/ENG/master.m3u8
+#EXTINF:-1 group-title="SonyLiv",SonyLiv - HIN
+#EXTVLCOPT:http-referrer=https://www.sonyliv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://sonymtmnew-akamaized.pages.dev/hls/live/2105079/cricodi2606/HIN/master.m3u8
+#EXTINF:-1 group-title="SonyLiv",SonyLiv - TAM
+#EXTVLCOPT:http-referrer=https://www.sonyliv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://sonymtmnew-akamaized.pages.dev/hls/live/2018457/cricodi2606/TAM/master.m3u8
+#EXTINF:-1 group-title="SonyLiv",SonyLiv - TEL
+#EXTVLCOPT:http-referrer=https://www.sonyliv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://sonymtmnew-akamaized.pages.dev/hls/live/2037142/cricodi2606/TEL/master.m3u8
+#EXTINF:-1 group-title="SonyLiv",SonyLiv - KAN
+#EXTVLCOPT:http-referrer=https://www.sonyliv.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://sonymtmnew-akamaized.pages.dev/hls/live/2037143/cricodi2606/KAN/master.m3u8
+#EXTINF:-1 group-title="SportzX",SportzX Live
+#EXTVLCOPT:http-referrer=https://streamscenter.online/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/ztyarueaghj71.m3u8?
+#EXTINF:-1 tvg-logo="https://play-lh.googleusercontent.com/SPbTC9tI82cpBSS4Nsv6pd-mvQd1lnJU2omTqs-sv4DvIdHVRxvZ9OboJTV5Gy1erWo6H569kZ74ZBg6v6sz=w600-h300-pc0xffffff-pd" group-title="ISCREEN",ISCREEN BD FHD
+#EXTVLCOPT:http-referrer=https://iscreen.com.bd/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://pastebin.com/raw/AFnPnGzQ?e=.m3u8
+#EXTINF:-1 group-title="beIN",beIN MAX FHD
+https://pub-e3eb43d02df647099f49525f20574746.r2.dev/BMax1-2/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.bellmedia.ca/lede/wp-content/uploads/2024/09/18581592_10155403529061055_8240563011649656197_n.jpg" group-title="TSN",TSN SPORTS HD
+#EXTVLCOPT:http-referrer=https://xyzstreams.st/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://lb.xyzcloud3.xyz/tsn1/index.m3u8?
+#EXTINF:-1 group-title="FOX",FOX ONE HD
+#EXTVLCOPT:http-referrer=https://xyzstreams.st/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://lb.xyzcloud3.xyz/FOX/index.m3u8?
+#EXTINF:-1 tvg-logo="https://duckduckgo.com/i/2e3815a5b7ddd3c9.png" group-title="TELEMUNDO",TELEMUNDO HD
+#EXTVLCOPT:http-referrer=https://instream.click/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://instreams.pro/US/NFLHD3/tracks-v1a1/mono.m3u8?
+#EXTINF:-1 tvg-logo="https://duckduckgo.com/i/2e3815a5b7ddd3c9.png" group-title="TELEMUNDO",TELEMUNDO FHD
+#EXTVLCOPT:http-referrer=https://xyzstreams.st/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://lb.xyzcloud3.xyz/Telemundo/index.m3u8?
+#EXTINF:-1 tvg-logo="https://www.bellmedia.ca/lede/wp-content/uploads/2024/09/18581592_10155403529061055_8240563011649656197_n.jpg" group-title="TSN",TSN SPORTS 4K
+#EXTVLCOPT:http-referrer=https://xyzstreams.st/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://lb.xyzcloud3.xyz/tsn4k/index.m3u8?
+#EXTINF:-1 group-title="IRIB",IRIB 4K
+https://ncdn.telewebion.ir/faratar/live/playlist.m3u8
+#EXTINF:-1 group-title="SportzX",SportzX Live
+#EXTVLCOPT:http-referrer=https://instream.click/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://instreams.pro/EU/HDWC1/tracks-v1a1/mono.m3u8?
+#EXTINF:-1 group-title="HD",HD SERVER ENG
+#EXTVLCOPT:http-referrer=https://streamscenter.online/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://edge2caster.pro/hls/b0h5fNwDKH.m3u8?
+#EXTINF:-1 group-title="HD",HD SERVER AR
+#EXTVLCOPT:http-referrer=https://streamscenter.online/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://mainstreams.pro/hls/sqdahach1ax.m3u8?
+#EXTINF:-1 tvg-logo="https://play-lh.googleusercontent.com/jBDZq3aBmCXuvtuJHEasqsdYPRxMBGzYmEha4dMlgoIk19Zlh6BGQC08Zt6Ifrmzhg" group-title="beIN",Bein Sports 2 Arabic
+https://1nyaler.streamhostingcdn.top/stream/21/index.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.livesoccertv.com/images/channels/thumbnails/kazsport-kazakhstan.jpg" group-title="QAZ",QAZ SPORTS FHD
+https://fo03-bkm.beetv.kz/bpk-tv/000003038/tve/index.m3u8
+#EXTINF:-1 group-title="NBC",NBC SPORTS HD
+#EXTVLCOPT:http-referrer=https://instream.click/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://instreams.pro/US/NFLHD4/tracks-v1a1/mono.m3u8?
+#EXTINF:-1 tvg-logo="https://duckduckgo.com/i/2e3815a5b7ddd3c9.png" group-title="FOX",FOX SPORTS 4K
+#EXTVLCOPT:http-referrer=https://xyzstreams.st/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://lb.xyzcloud3.xyz/FS1/index.m3u8?
+#EXTINF:-1 group-title="SportzX",SportzX Live
+#EXTVLCOPT:http-referrer=https://instream.click/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://instreams.pro/EU/HDWC3/tracks-v1a1/mono.m3u8?
+#EXTINF:-1 group-title="HD",HD SERVER ENG
+#EXTVLCOPT:http-referrer=https://streamscenter.online/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://edgestreams.pro/hls/24SDAZFcsqnj24.m3u8?
+#EXTINF:-1 group-title="HD",HD SERVER AR
+#EXTVLCOPT:http-referrer=https://streamscenter.online/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://mainstreams.pro/hls/eJmauBDCIf.m3u8?
+#EXTINF:-1 group-title="ISCREEN",ISCREEN BD FHD
+#EXTVLCOPT:http-referrer=https://iscreen.com.bd/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://livecdn.rockstreamer.com/videos/ac1c515520e446f6a901d23ab65bac39/master.m3u8
+
+
 
 #EXTINF:-1 tvg-logo="https://nextstreamer-graphic.rockstreamer.com/images/yuqpsedRHKONW9TyuToi.jpeg" group-title="Bongo TV",FIFA - Brazil VS Scot
 https://flat-cloud-7fa5.siamkushtia33.workers.dev/?url=https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/main.m3u8&headers=%7B%22Referer%22%3A%22https%3A%2F%2Fiscreen.com.bd%2F%22%7D
