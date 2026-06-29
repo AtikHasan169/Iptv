@@ -94,7 +94,7 @@ https://mainstreams.pro/hls/eJmauBDCIf.m3u8?
 #EXTINF:-1 group-title="ISCREEN",ISCREEN BD FHD
 #EXTVLCOPT:http-referrer=https://iscreen.com.bd/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://livecdn.rockstreamer.com/videos/ea606f99f52e4307af0d410cc0a14018/master.m3u8
+https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/main.m3u8
 
 
 
