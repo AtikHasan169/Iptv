@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jstGvUwPa-bSjoxjz9tUpnXzifafpBbtpLVjZkWfrw&s=10" group-title="FIFA WORLD CUP", Tsport Mime
+http://10.20.30.40:8088/102/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jstGvUwPa-bSjoxjz9tUpnXzifafpBbtpLVjZkWfrw&s=10" group-title="FIFA WORLD CUP", World
+http://10.20.30.40:8088/101/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_jstGvUwPa-bSjoxjz9tUpnXzifafpBbtpLVjZkWfrw&s=10" group-title="FIFA WORLD CUP",BIOSCOPE+
 https://d1kep4defqj6r1.cloudfront.net/out/v1/4e21d5a122c549289dd6feab259266e8/index_2.m3u8
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpV_UYf24zDrTiOc2e4nvcH7O_mgW11gIc_si7L8UmhQ&s=10" group-title="FIFA WORLD CUP",BBC | FIFA
